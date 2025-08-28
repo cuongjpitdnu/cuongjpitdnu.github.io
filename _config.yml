@@ -1,5 +1,25 @@
-title: "Blog của cuongnm"
-description: "Ghi chép về Java, Spring Boot, Oracle & Docker"
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-remote-theme
+title: "My Blog Github"
+author: "Your Name"
+description: "Welcome to my blog"
+url: ""
+baseurl: ""
+permalink: /:year/:month/:day/:title/
+timezone: Asia/Ho_Chi_Minh
+markdown: kramdown
+highlighter: rouge
+exclude: [README.md]
+theme_config:
+  brand_title: "My Blog Github"
+  nav:
+    - title: "ABOUT ME"
+      url: "/about/"
+    - title: "CONTACT"
+      children:
+        - title: "Email"
+          url: "mailto:you@example.com"
+        - title: "Facebook"
+          url: "https://facebook.com/"
+    - title: "RADIO LOFI CHILL"
+      url: "https://www.youtube.com/watch?v=jfKfPfyJRdk"
+    - title: "Search"
+      url: "/search/"

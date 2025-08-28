@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<section class="hero">
+  <img class="avatar" src="{{ '/assets/img/avatar.svg' | relative_url }}" alt="avatar">
+  <h1 class="site-title">CuongNM<span class="check">✅</span></h1>
+  <div class="tagline">Welcome to my blog</div>
+</section>
+
+<section class="post-list">
+  {% for post in site.posts %}
+    <article class="post-card">
+      <div class="post-main">
+        <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {% if post.subtitle %}<div class="post-sub">{{ post.subtitle }}</div>{% endif %}
+        <div class="post-meta">Posted on {{ post.date | date: "%B %d, %Y" }}</div>
+        <div class="post-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</div>
+        {% if post.tags %}
+          <div class="post-tags">
+            {% for tag in post.tags %}
+              <a class="tag" href="{{ '/tags/#' | append: tag | relative_url }}">{{ tag }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <a class="readmore" href="{{ post.url | relative_url }}">[Read More]</a>
+      </div>
+      {% if post.image %}
+        <a class="thumb" href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | relative_url }}" alt="thumb">
+        </a>
+      {% endif %}
+    </article>
+    <hr class="divider">
+  {% endfor %}
+</section>

@@ -1,0 +1,20 @@
+---
+---
+<!DOCTYPE html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script defer src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+</head>
+<body class="theme">
+  {% include header.html %}
+  <main class="container">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

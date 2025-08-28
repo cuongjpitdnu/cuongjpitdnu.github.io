@@ -1,0 +1,26 @@
+{% assign cfg = site.theme_config %}
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="icon">💻</span>
+      <a href="{{ '/' | relative_url }}">{{ cfg.brand_title | default: site.title }}</a>
+    </div>
+    <nav class="menu">
+      {% for item in cfg.nav %}
+        {% if item.children %}
+          <div class="dropdown">
+            <a href="#" class="dropbtn">{{ item.title }}</a>
+            <div class="dropdown-content">
+              {% for sub in item.children %}
+                <a href="{{ sub.url }}">{{ sub.title }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        {% else %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endif %}
+      {% endfor %}
+      <button id="themeToggle" aria-label="Chuyển giao diện" title="Chuyển giao diện">☀️</button>
+    </nav>
+  </div>
+</header>
