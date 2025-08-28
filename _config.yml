@@ -21,5 +21,5 @@ theme_config:
           url: "https://facebook.com/"
     - title: "RADIO LOFI CHILL"
       url: "https://www.youtube.com/watch?v=jfKfPfyJRdk"
-    - title: "Search"
-      url: "/search/"
+    - title: "Curriculum Vitae"
+      url: "/cv/"
